@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+
+  --title: #b52184;
+  --text: #312d64;
+  --white: #f9f4fb;
+
+  --font:'Mulish', sans-serif;
+  --linear: linear-gradient(96.21deg, #343193 0%, #302C63 99.68%);
+}
+
+body,
+input,
+textarea,
+button {
+  font:500 1.6rem var(--font);
+}
+
+main,
+footer {
+  max-width: 43rem;
+  margin-inline: auto;
+}
+
+.top {
+  text-align: center;
+
+  padding-bottom: 9.3rem;
+}
+
+.space {
+  width: 36.4rem;
+  height: 37rem;
+}
+
+.top,
+.contact {
+  background-color: var(--white);
+}
+
+h1,
+h2 {
+  color: var(--title);
+  font-weight: 900;
+  font-size: 3.2rem;
+
+  margin-top: 1.7rem;
+  margin-bottom: .5rem; 
+}
+
+.top h3 {
+  color: var(--text);
+  font-weight: 700;
+  font-size: 2rem;
+
+  margin-bottom: 3.5rem;
+}
+
+.content{
+  background-image: var(--linear);
+  padding-block: 5.5rem;
+}
+
+.item {
+  display: grid;
+  row-gap: 5rem;
+}
+
+.itens {
+  height: 34.7rem;
+  width: 35.2rem;
+  padding: 2.6rem 6rem 2.6rem 2.6rem;
+  border-radius: 2rem;
+  margin-inline: auto;
+  background-color: var(--white);
+}
+
+h2 {
+  font-size: 3rem;
+  margin: initial;
+  margin-top: 1rem;
+  margin-bottom: .8rem;
+}
+
+p {
+  color: var(--text);
+  font-weight: 700;
+
+  height: 15.1rem;
+}
+
+.contact {
+  padding-inline: 4rem;
+  margin-inline: auto;
+  padding-bottom: 6.5rem;
+}
+
+.contact h1 {
+  margin-top: 7.8rem;
+  margin-bottom: 1.9rem;
+}
+
+.itens img,
+.arrow{
+  transition: transform 200ms ease-out;
+} 
+
+.itens img:hover,
+.arrow:hover {
+  transform: scale(1.1) rotate(2deg);
+}
+
+
+h1:hover,
+h2:hover {
+  color: #911969;
+}
+
+form{
+  display: grid;
+  grid-auto-flow: row;
+  gap: 2.4rem;
+}
+
+input,
+textarea {
+  border: 1.8px solid #312D64;
+  border-radius: 1.6rem;
+}
+
+input { 
+  padding: 1.6rem 1.6rem 1.6rem 5rem;
+  max-height: 4.8rem;
+  width: 100%;
+}
+
+.input {
+  position: relative;
+}
+
+label {
+  position: absolute;
+  top: 25%;
+  transform: translateX(calc(1.4rem));
+ 
+}
+
+input::placeholder, 
+input,
+textarea::placeholder,
+textarea {
+  font: 700 1.6rem 'Mulish', sans-serif;
+  color: var(--text);
+}
+
+textarea {
+  height: 12.6rem;
+  padding: 1.6rem;
+}
+
+button {
+  color: var(--white);
+  font: bold 1.2rem 'Mulish', sans-serif;
+  background-image: var(--linear);
+
+  width: 15rem;
+  border: none;
+  border-radius: 1.6rem;
+  padding: 1rem 1.6rem;
+}
+
+button:hover {
+ background-image: none;
+ background-color: #312c77;
+ font-size: 1.5rem;
+}
+
+footer {
+  font: 700 2rem 'Mulish', sans-serif;
+  color: var(--white);
+  
+  padding-block: 3.2rem;
+  text-align: center;
+  margin-inline: auto;
+  background-image: var(--linear);
+}
+
+@media (width > 90rem) {
+  *,
+  body,
+  main,
+  footer,
+  .itens,
+  .contact{
+    margin: initial;
+    padding: initial;
+    max-width: initial;
+  }
+
+  .top {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    gap: 2.8rem;
+
+    height: 83.6rem;
+    padding-left: 11rem;
+    padding-right: 3rem;
+  }
+
+  h1 {
+    font-size: 5.8rem;
+    margin-top: 31rem;
+    margin-bottom: 8px;
+  }
+
+  .flex h3 {
+    font-size: 3.2rem;
+    margin-bottom: 18rem;
+  }
+
+  .arrow {
+    display: flex;
+  }
+
+  .space {
+    width: 72rem;
+    height: 73.2rem;
+  }
+
+  .item {
+   display: flex;
+   width: 121.8rem;
+   margin-inline: auto;
+  }
+
+  .itens {
+    width: 36.6rem;
+    height: 44.8rem;
+    padding: 3.2rem;
+    border-radius: 2.4rem;
+  }
+
+  .itens + .itens {
+    margin-left: 6rem;
+  }
+  
+  .itens h2 {
+    font-size: 3.5rem;
+  }
+
+  .itens p {
+    font-size: 2rem;
+  }
+
+  .contact {
+    display: flex;
+    justify-content: space-between;
+
+    min-width: 100%;
+    padding-left: 11rem;
+  }
+  
+  form {
+    padding-bottom: 9.5rem;
+    width: 59.5rem;
+    
+  }
+
+  .contact h1 {
+    font-size: 4.2rem;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  button {
+    height: 5rem;
+    width: 16rem;
+    font-size: 1.4rem;
+  }
+
+  .stars {
+    background-image: url(./image/strars.png);
+    min-height: 100%;
+    width: 64rem;
+  }
+
+  footer{
+    padding-block: 3.2rem;
+  }
+}
+
